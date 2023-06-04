@@ -31,7 +31,7 @@ class AccountServiceImpl(AccountService):
         self.validate_password(request.get_password())
         self.validate_email_address(request.get_gmail())
 
-        # self.send_mail_to_mail_address(request.get_gmail())
+        self.send_mail_to_mail_address(request.get_gmail())
 
         account = Mapper.map_request_with_account(request)
         saved_account = self.account_repository.add(account)
@@ -97,8 +97,7 @@ class AccountServiceImpl(AccountService):
         print()
 
     def deposit_into(self, deposit_request: DepositRequest) -> str:
-        account = self.account_repository.find_by_account_number(deposit_request
-                                                                 .get_receivers_account_number())
+        account = self.account_repository.find_by_account_number(deposit_request.get_receivers_account_number())
         if account:
             deposit_request.set_receivers_account_name(account.get_first_name() + " " + account.get_last_name())
         if not account:

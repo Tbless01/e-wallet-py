@@ -49,5 +49,6 @@ class TestAccountRepositoryImpl(TestCase):
         bless_account = Account()
         bless_account.set_phone_number("09152652431")
         account_repository.add(bless_account)
+        # print(account_repository.find_by_account_number("9152652431"))
         self.assertEqual(bless_account, account_repository.find_by_account_number("9152652431"))
 

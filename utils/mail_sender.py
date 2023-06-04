@@ -7,9 +7,8 @@ import smtplib
 class MailSender:
 
     def email_alert(self, subject_in, body_in, to_in):
-        msg_sender = "ayomitobi1@gmail.com"
-        msg_password = 'ygcizpgdipolnkgc'
-        # msg_receiver = 'olaitanblessinge@gmail.com'
+        msg_sender = "instantpay529@gmail.com"
+        msg_password = 'dlzetlrbctmnbqlk'
         msg_receiver2 = to_in
 
         subject = subject_in

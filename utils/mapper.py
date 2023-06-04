@@ -23,7 +23,7 @@ class Mapper:
         return account
 
     @staticmethod
-    def map_account_with_response(account: Account):
+    def map_account_with_response(account: Account) -> RegisterResponse:
         response = RegisterResponse()
         response.set_account_number(account.get_account_number())
         response.set_gmail(account.get_gmail())
@@ -64,4 +64,3 @@ class Mapper:
         complain_response.set_title_of_complain(complain.get_title_of_complain())
         complain_response.set_user_email_address(complain.get_user_email_address())
         return complain_response
-
